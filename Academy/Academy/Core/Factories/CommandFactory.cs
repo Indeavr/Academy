@@ -1,4 +1,5 @@
 ﻿using Academy.Commands.Contracts;
+using Bytes2you.Validation;
 using Ninject;
 
 namespace Academy.Core.Factories
@@ -9,6 +10,8 @@ namespace Academy.Core.Factories
 
         public CommandFactory(IKernel kernel)
         {
+            Guard.WhenArgument(kernel, "kernel").IsNull().Throw();
+
             this.kernel = kernel;
         }
 
