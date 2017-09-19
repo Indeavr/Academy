@@ -5,10 +5,10 @@ namespace Academy.Core.Contracts
 {
     public interface IDatabase
     {
-        IList<ISeason> Seasons { get; set; }
+        IList<ISeason> Seasons { get; }
 
-        IList<IStudent> Students { get; set; }
+        IList<IStudent> Students { get; }
 
-        IList<ITrainer> Trainers { get; set; }
+        IList<ITrainer> Trainers { get; }
     }
 }

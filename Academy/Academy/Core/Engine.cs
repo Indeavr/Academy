@@ -17,7 +17,7 @@ namespace Academy.Core
 
         private readonly IParser parser;
 
-        private IDatabase database;
+        private readonly IDatabase database;
 
 
         public Engine(IReader reader, IWriter writer, IParser parser, IDatabase database)

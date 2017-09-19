@@ -6,11 +6,11 @@ namespace Academy.Core.Providers
 {
     public class Database : IDatabase
     {
-        private IList<ISeason> seasons;
+        private readonly IList<ISeason> seasons;
 
-        private IList<IStudent> students;
+        private readonly IList<IStudent> students;
 
-        private IList<ITrainer> trainers;
+        private readonly IList<ITrainer> trainers;
 
         public Database()
         {
@@ -25,10 +25,6 @@ namespace Academy.Core.Providers
             {
                 return this.seasons;
             }
-            set
-            {
-                this.seasons = value;
-            }
         }
 
         public IList<IStudent> Students
@@ -37,10 +33,6 @@ namespace Academy.Core.Providers
             {
                 return this.students;
             }
-            set
-            {
-                this.students = value;
-            }
         }
 
         public IList<ITrainer> Trainers
@@ -48,10 +40,6 @@ namespace Academy.Core.Providers
             get
             {
                 return this.trainers;
-            }
-            set
-            {
-                this.trainers = value;
             }
         }
     }
