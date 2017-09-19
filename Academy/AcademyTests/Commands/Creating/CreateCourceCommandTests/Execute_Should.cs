@@ -38,7 +38,10 @@ namespace AcademyTests.Commands.CreateCourceCommand
             this.databaseMock = new Mock<IDatabase>();
             this.seasonMock = new Mock<ISeason>();
 
-            this.databaseMock.SetupGet(m => m.Seasons).Returns(new List<ISeason>() { seasonMock.Object });
+            List<ISeason> seasons = new List<ISeason>()
+            { seasonMock.Object };
+
+            this.databaseMock.SetupGet(m => m.Seasons).Returns(seasons);
 
             this.engine = new Engine(readerMock.Object, writerMock.Object, parserMock.Object, databaseMock.Object);
         }
@@ -55,6 +58,8 @@ namespace AcademyTests.Commands.CreateCourceCommand
             It.IsAny<string>(),
             It.IsAny<string>()))
             .Returns(courseMock.Object);
+
+            seasonMock.Setup(m => m.Courses).Returns(new List<ICourse>());
 
             var command = new CreateCourseCommand(factoryMock.Object, engine);
 
@@ -78,11 +83,11 @@ namespace AcademyTests.Commands.CreateCourceCommand
             It.IsAny<string>()))
             .Returns(courseMock.Object);
 
-            seasonMock.Setup(x => x.Courses).Returns(new List<ICourse>() { courseMock.Object });
+            seasonMock.Setup(x => x.Courses).Returns(new List<ICourse>());
 
             var command = new CreateCourseCommand(factoryMock.Object, engine);
 
-            string expectedMessage = $"Course with ID {seasonMock.Object.Courses.Count - 1} was created in Season {databaseMock.Object.Seasons.Count - 1}.";
+            string expectedMessage = $"Course with ID 0 was created in Season {databaseMock.Object.Seasons.Count - 1}.";
             
             // Act && Assert
             Assert.AreEqual(expectedMessage, command.Execute(commandLine));

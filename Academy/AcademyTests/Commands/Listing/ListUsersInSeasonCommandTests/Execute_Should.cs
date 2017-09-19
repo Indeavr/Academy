@@ -25,7 +25,6 @@ namespace AcademyTests.Commands.Listing.ListUsersInSeasonCommandTests
 
             engineMock.Setup(m => m.Database.Seasons).Returns(seasons);
 
-
             var command = new ListUsersInSeasonCommand(factoryMock.Object, engineMock.Object);
 
             List<string> parameters = new List<string>()
@@ -39,5 +38,8 @@ namespace AcademyTests.Commands.Listing.ListUsersInSeasonCommandTests
             // Assert
             seasonMock2.Verify(x => x.ListUsers(), Times.Once);
         }
+
+        //[TestMethod]
+
     }
 }
