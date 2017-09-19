@@ -52,7 +52,8 @@ namespace Academy.Core.Tests
             readerMock.SetupSequence(m => m.ReadLine()).Returns(String.Empty).Returns(null).Returns("Exit");
 
             StringBuilder builder = new StringBuilder();
-            builder.AppendLine("Command cannot be null or empty.\r\nCommand cannot be null or empty.");
+            builder.AppendLine("Command cannot be null or empty.");
+            builder.AppendLine("Command cannot be null or empty.");
 
             string expectedErrorMessage = builder.ToString();
             // Act

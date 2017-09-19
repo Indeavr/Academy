@@ -1,4 +1,5 @@
 ﻿using Academy.Commands.Contracts;
+using Bytes2you.Validation;
 using System;
 using System.Collections.Generic;
 
@@ -10,6 +11,8 @@ namespace Academy.Commands.Decorators
 
         public DateCommandDecorator(ICommand command)
         {
+            Guard.WhenArgument(command, "command").IsNull().Throw();
+
             this.command = command;
         }
 

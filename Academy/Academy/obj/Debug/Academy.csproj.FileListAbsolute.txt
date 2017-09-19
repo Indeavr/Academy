@@ -1,0 +1,10 @@
+D:\General\Programming\GitHub\Academy\Academy\Academy\bin\Debug\Academy.exe.config
+D:\General\Programming\GitHub\Academy\Academy\Academy\bin\Debug\Academy.exe
+D:\General\Programming\GitHub\Academy\Academy\Academy\bin\Debug\Academy.pdb
+D:\General\Programming\GitHub\Academy\Academy\Academy\bin\Debug\Bytes2you.Validation.dll
+D:\General\Programming\GitHub\Academy\Academy\Academy\bin\Debug\Ninject.dll
+D:\General\Programming\GitHub\Academy\Academy\Academy\bin\Debug\Ninject.xml
+D:\General\Programming\GitHub\Academy\Academy\Academy\obj\Debug\Academy.csprojResolveAssemblyReference.cache
+D:\General\Programming\GitHub\Academy\Academy\Academy\obj\Debug\Academy.csproj.CoreCompileInputs.cache
+D:\General\Programming\GitHub\Academy\Academy\Academy\obj\Debug\Academy.exe
+D:\General\Programming\GitHub\Academy\Academy\Academy\obj\Debug\Academy.pdb

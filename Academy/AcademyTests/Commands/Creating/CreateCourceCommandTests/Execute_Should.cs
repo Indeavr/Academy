@@ -38,7 +38,7 @@ namespace AcademyTests.Commands.CreateCourceCommand
             this.databaseMock = new Mock<IDatabase>();
             this.seasonMock = new Mock<ISeason>();
 
-            this.databaseMock.SetupGet(m => m.Seasons).Returns(new List<ISeason>() { new Season(2016, 2017, 0) });
+            this.databaseMock.SetupGet(m => m.Seasons).Returns(new List<ISeason>() { seasonMock.Object });
 
             this.engine = new Engine(readerMock.Object, writerMock.Object, parserMock.Object, databaseMock.Object);
         }
