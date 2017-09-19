@@ -24,6 +24,7 @@ namespace Academy.Core
         {
             Guard.WhenArgument(reader, "reader").IsNull().Throw();
             Guard.WhenArgument(writer, "writer").IsNull().Throw();
+
             Guard.WhenArgument(parser, "parser").IsNull().Throw();
             Guard.WhenArgument(database, "database").IsNull().Throw();
 
